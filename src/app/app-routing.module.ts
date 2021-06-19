@@ -14,6 +14,14 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
+    path:'admin',
+    loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)
+  },
+  {
+    path:'public',
+    loadChildren:()=>import('./public/public.module').then(mod=>mod.PublicModule)
+  },
+  {
     path:'register',
     component:RegisterComponent
   }
