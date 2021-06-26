@@ -5,13 +5,13 @@ import { RegisterComponent } from './auth/register/register.component';
 
 const routes: Routes = [
   {
-    path:'login',
-    component:LoginComponent
+    path:'',
+    redirectTo:'/admin/dashboard',
+    pathMatch:'full'
   },
   {
-    path:'',
-    redirectTo:'/login',
-    pathMatch:'full'
+    path:'login',
+    component:LoginComponent
   },
   {
     path:'admin',

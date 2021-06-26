@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { PublicComponent } from './public/public.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PublicComponent } from './public/public.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialDesign
+    MaterialDesign,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
