@@ -4,10 +4,10 @@
         <button mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
-        <span>My Angular</span>
+        <span>Sistem Informasi Inventaris Desa</span>
         <div class="uk-width-expand"></div>
         <mat-icon matlisticon>admin_panel_settings</mat-icon>
-        <button mat-button >Logout</button>
+        <button mat-button routerLink="/login" >Logout</button>
     </mat-toolbar>
     <!--end toolbar-->
     
@@ -23,16 +23,19 @@
       
       <mat-nav-list>
         <mat-list-item routerLink="/admin/dashboard">
-            <mat-icon matListIcon>dashboard</mat-icon>
+            <mat-icon matListIcon>space_dashboard</mat-icon>
             <h3 matLine>Dashboard</h3>
         </mat-list-item>
-        
-        <mat-list-item routerLink="/admin/inventaris">
-            <mat-icon matListIcon>dashboard_customize</mat-icon>
+        <mat-list-item routerLink="/admin/data-barang">
+            <mat-icon matListIcon>list</mat-icon>
+            <h3 matLine>List Data</h3>
+        </mat-list-item>
+        <mat-list-item routerLink="/admin/tambah-data">
+            <mat-icon matListIcon>add</mat-icon>
             <h3 matLine>Tambah Data</h3>
-            </mat-list-item>
-            
-        </mat-nav-list>
+        </mat-list-item>
+
+    </mat-nav-list>
       </mat-sidenav>
     
     <mat-sidenav #sidenav mode="side" [position]="'end'"  class="example-sidenav"
@@ -43,7 +46,7 @@
     
     </mat-sidenav>
     <!--sidenav content-->
-    <mat-sidenav-content style="padding: 20px; background-color: #ccc;">
+    <mat-sidenav-content style="padding: 20px; background-color: #2c3e50;">
     <!--halaman-halaman tampil disini-->
     
    

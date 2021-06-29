@@ -4,8 +4,10 @@ import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialDesign } from '../material/material';
-import { InventarisComponent } from './inventaris/inventaris.component';
 import { FormsModule } from '@angular/forms';
+import { DataBarangComponent } from './data-barang/data-barang.component';
+import { TambahDataComponent } from './tambah-data/tambah-data.component';
+
 
 const routes: Routes = [
   {
@@ -17,9 +19,14 @@ const routes: Routes = [
         component:DashboardComponent
       },
       {
-        path:'inventaris',
-        component:InventarisComponent
-      }    
+        path:'data-barang',
+        component:DataBarangComponent
+      },
+      {
+        path:'tambah-data',
+        component:TambahDataComponent
+      }
+      
     ]
   }
 
@@ -29,7 +36,9 @@ const routes: Routes = [
   declarations: [
     AdminComponent,
     DashboardComponent,
-    InventarisComponent
+    DataBarangComponent,
+    TambahDataComponent
+
   ],
   imports: [
     CommonModule,

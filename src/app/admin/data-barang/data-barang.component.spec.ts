@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InventarisComponent } from './inventaris.component';
+import { DataBarangComponent } from './data-barang.component';
 
-describe('InventarisComponent', () => {
-  let component: InventarisComponent;
-  let fixture: ComponentFixture<InventarisComponent>;
+describe('DataBarangComponent', () => {
+  let component: DataBarangComponent;
+  let fixture: ComponentFixture<DataBarangComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InventarisComponent ]
+      declarations: [ DataBarangComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InventarisComponent);
+    fixture = TestBed.createComponent(DataBarangComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,5 +22,4 @@ describe('InventarisComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  
 });

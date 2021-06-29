@@ -1,0 +1,24 @@
+<mat-card>
+    <div class="container">
+            <h2>Tambah Data</h2>
+            <form #dataForm ="ngForm" (ngSubmit)="onSubmit(dataForm.value)">
+                <div class="form-group">
+                    <label>Nama barang</label>
+                    <input type="text" class="form-control" name="nama" ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Dibeli sendiri</label>
+                    <input type="text" class="form-control"name="beli" ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Asal barang</label>
+                    <input type="text" class="form-control"name="asal" ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Kondisi barang</label>
+                    <input type="text" class="form-control"name="kondisi" ngModel>
+                </div>
+                <button type="submit"  class="btn btn-primary">Save</button>
+            </form>
+        </div>
+</mat-card>

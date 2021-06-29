@@ -10,13 +10,15 @@ import { RegisterComponent } from './auth/register/register.component';
 import { PublicComponent } from './public/public.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     LoginComponent,
     RegisterComponent,
-    PublicComponent
+    PublicComponent,
+   
   ],
   imports: [
     BrowserModule,
