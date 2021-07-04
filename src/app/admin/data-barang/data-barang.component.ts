@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TambahData } from './models/tambah-data.model';
+import { TambahDataService } from '../tambah-data/services/tambah-data.service';
+
 
 
 @Component({
@@ -7,19 +10,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-barang.component.scss']
 })
 export class DataBarangComponent implements OnInit {
-  value:any={};
-  constructor(
-    
-  ) { }
+  tambahdatas: TambahData[];
+  constructor(private tambahdataService:TambahDataService) { 
+    this.tambahdatas =[]
+  }
 
   ngOnInit(): void {
-    this.value={
-      nama:'Supra X',
-      beli:'Ya',
-      asal:'Bengkulu',
-      kondisi:'Baik'
-
-    }
+    this.tambahdatas = this.tambahdataService.onGet();
   }
+
+  
 }
 
