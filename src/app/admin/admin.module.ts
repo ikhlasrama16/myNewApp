@@ -5,8 +5,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialDesign } from '../material/material';
 import { FormsModule } from '@angular/forms';
-import { DataBarangComponent } from './data-barang/data-barang.component';
-import { TambahDataComponent } from './tambah-data/tambah-data.component';
+import { DataComponent } from './data/data.component';
+import { EditComponent } from './data/edit/edit.component';
+
 
 
 const routes: Routes = [
@@ -19,12 +20,16 @@ const routes: Routes = [
         component:DashboardComponent
       },
       {
-        path:'data-barang',
-        component:DataBarangComponent
+        path:'data',
+        component:DataComponent
       },
       {
-        path:'tambah-data',
-        component:TambahDataComponent
+        path:'data/add/:id',
+        component:EditComponent
+      },
+      {
+        path:'data/edit/:id',
+        component:EditComponent
       }
       
     ]
@@ -36,8 +41,8 @@ const routes: Routes = [
   declarations: [
     AdminComponent,
     DashboardComponent,
-    DataBarangComponent,
-    TambahDataComponent
+    DataComponent,
+    EditComponent
 
   ],
   imports: [
