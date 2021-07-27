@@ -1,0 +1,14 @@
+{
+    "login":[
+        {
+            "email":"ikhlas@mail.com",
+            "password":"mikhlasr"
+        }
+    ],
+    "register":[
+        {
+            "email":"ikhlas@mail.com",
+            "password":"mikhlasr"
+        }
+    ]
+}

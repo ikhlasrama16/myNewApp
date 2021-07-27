@@ -7,7 +7,7 @@
         <span>Sistem Informasi Inventaris Desa</span>
         <div class="uk-width-expand"></div>
         <mat-icon matlisticon>admin_panel_settings</mat-icon>
-        <button mat-button routerLink="/login" >Logout</button>
+        <button mat-button (click)="logout()" >Logout</button>
     </mat-toolbar>
     <!--end toolbar-->
     
@@ -47,7 +47,7 @@
     <!--halaman-halaman tampil disini-->
     
    
-<router-outlet></router-outlet>
+<router-outlet (isLogout)="handleLogout()"></router-outlet>
     
     
     

@@ -7,6 +7,7 @@ import { MaterialDesign } from '../material/material';
 import { FormsModule } from '@angular/forms';
 import { DataComponent } from './data/data.component';
 import { EditComponent } from './data/edit/edit.component';
+import { RegisterComponent } from '../auth/register/register.component';
 
 
 
@@ -42,7 +43,7 @@ const routes: Routes = [
     AdminComponent,
     DashboardComponent,
     DataComponent,
-    EditComponent
+    EditComponent,
 
   ],
   imports: [

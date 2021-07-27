@@ -9,6 +9,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { PublicComponent } from './public/public.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire';
+import { ApiService } from './services/api.service';
 
 
 @NgModule({
@@ -16,8 +19,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     AuthComponent,
     LoginComponent,
-    RegisterComponent,
     PublicComponent,
+    RegisterComponent
    
   ],
   imports: [
@@ -25,9 +28,18 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialDesign,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp( {
+      apiKey: "AIzaSyDlXXgkTGPqvJl1Jjl10Og9HNwUp9o7YpA",
+      authDomain: "tproject-845e1.firebaseapp.com",
+      projectId: "tproject-845e1",
+      storageBucket: "tproject-845e1.appspot.com",
+      messagingSenderId: "820932151122",
+      appId: "1:820932151122:web:d16b674f8b94bc675a1c8b"
+    })
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
