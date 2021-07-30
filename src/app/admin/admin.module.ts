@@ -5,9 +5,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialDesign } from '../material/material';
 import { FormsModule } from '@angular/forms';
-import { DataComponent } from './data/data.component';
-import { EditComponent } from './data/edit/edit.component';
-import { RegisterComponent } from '../auth/register/register.component';
+import { ProductComponent } from './product/product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 
@@ -21,17 +20,10 @@ const routes: Routes = [
         component:DashboardComponent
       },
       {
-        path:'data',
-        component:DataComponent
-      },
-      {
-        path:'data/add/:id',
-        component:EditComponent
-      },
-      {
-        path:'data/edit/:id',
-        component:EditComponent
+        path:'product',
+        component:ProductComponent
       }
+      
       
     ]
   }
@@ -42,8 +34,10 @@ const routes: Routes = [
   declarations: [
     AdminComponent,
     DashboardComponent,
-    DataComponent,
-    EditComponent,
+    
+    ProductComponent,
+    ProductDetailComponent
+    
 
   ],
   imports: [

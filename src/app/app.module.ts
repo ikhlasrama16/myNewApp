@@ -12,7 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { ApiService } from './services/api.service';
-
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ApiService } from './services/api.service';
     AuthComponent,
     LoginComponent,
     PublicComponent,
-    RegisterComponent
+    RegisterComponent,
+    
    
   ],
   imports: [
@@ -30,14 +33,9 @@ import { ApiService } from './services/api.service';
     MaterialDesign,
     FormsModule,
     HttpClientModule,
-    AngularFireModule.initializeApp( {
-      apiKey: "AIzaSyDlXXgkTGPqvJl1Jjl10Og9HNwUp9o7YpA",
-      authDomain: "tproject-845e1.firebaseapp.com",
-      projectId: "tproject-845e1",
-      storageBucket: "tproject-845e1.appspot.com",
-      messagingSenderId: "820932151122",
-      appId: "1:820932151122:web:d16b674f8b94bc675a1c8b"
-    })
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp( environment.firebase)
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
