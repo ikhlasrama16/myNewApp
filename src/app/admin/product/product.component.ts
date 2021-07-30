@@ -25,7 +25,7 @@ export class ProductComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.title='product';
+    this.title='List Inventaris';
     this.auth.user.subscribe(user=>{
       this.userData = user;
       this.getBooks();
