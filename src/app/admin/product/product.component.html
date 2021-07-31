@@ -8,7 +8,7 @@
     <mat-card-content>
         <div class="uk-flex">
             <span class="uk-width-expand"></span>
-            <button mat-flat-button color="primary" (click)="productDetail({},-1)">Tambah Produk</button>
+            <button mat-flat-button color="primary" (click)="productDetail({},-1)">Tambah Data</button>
         </div>
         <table class="uk-table uk-table-middle uk-table-divider">
             <thead>  
@@ -17,7 +17,6 @@
                 <th>Kode Barang</th>
                 <th>Identitas</th>
                 <th>Keterangan</th>
-                
                 <th align="right">#</th>
             </thead>
             <tbody>
@@ -27,7 +26,6 @@
                     <td>{{book.kode}}</td>
                     <td>{{book.identitas}}</td>
                     <td>{{book.ket}}</td>
-
                     <td align="right">
                         <button mat-button color="primary" (click)="productDetail(book,idx)"[disabled]="loading">Edit</button>
                         <button mat-button color="warn" (click)="deleteProduct(book.id, idx)" [disabled]="loadingDelete[idx]">{{loadingDelete[idx] ? 'Menghapus..':'Delete'}}</button>

@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     await this.apiService.signin(user.email, user.password)
     if (this.apiService.isLoggedIn)
     this.isSingedIn = true
-    this.router.navigate(['admin/dashboard']);
+    this.router.navigate(['admin/berita']);
   }
   
   handleLogout(){

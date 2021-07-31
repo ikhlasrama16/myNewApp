@@ -30,28 +30,28 @@ export class ProductDetailComponent implements OnInit {
  }
  loading:boolean | undefined;
  saveData()
- {
-  this.loading=true;
-  if(this.data.id== undefined)
-  {
-  let doc = new Date().getTime().toString();
-  this.data.uid= this.userData.uid;
-  this.db.collection('data').doc(doc).set(this.data).then(res=>{
-    this.loading = false;
-  }).catch(err=>{
-    console.log(err);
-    this.loading = false;
-    alert('Tidak Dapat menyimpan data')
-  })
-  }else{
-    this.db.collection('data').doc(this.data.id).update(this.data).then(res=>{
-      this.loading = false;
-    }).catch(err=>{
-      console.log(err);
-      this.loading = false;
-      alert('Tidak Dapat menyimpan data')
-    })
-    this.router.navigate(['admin/product']);
-  }
- }
+    {
+      this.loading=true;
+      if(this.data.id== undefined)
+      {
+      let doc = new Date().getTime().toString();
+      this.data.uid= this.userData.uid;
+      this.db.collection('data').doc(doc).set(this.data).then(res=>{
+        this.loading = false;
+      }).catch(err=>{
+        console.log(err);
+        this.loading = false;
+        alert('Tidak Dapat menyimpan data')
+      })
+      }else{
+        this.db.collection('data').doc(this.data.id).update(this.data).then(res=>{
+          this.loading = false;
+        }).catch(err=>{
+          console.log(err);
+          this.loading = false;
+          alert('Tidak Dapat menyimpan data')
+        })
+        this.router.navigate(['admin/product']);
+      }
+    }
 }

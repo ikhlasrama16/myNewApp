@@ -1,12 +1,15 @@
 import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin/admin.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialDesign } from '../material/material';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ImageComponent } from './image/image.component';
+import { BeritaComponent } from './berita/berita.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -22,9 +25,15 @@ const routes: Routes = [
       {
         path:'product',
         component:ProductComponent
+      },
+      {
+        path:'berita',
+        component:BeritaComponent
+      },
+      {
+        path:'image',
+        component:ImageComponent
       }
-      
-      
     ]
   }
 
@@ -36,7 +45,9 @@ const routes: Routes = [
     DashboardComponent,
     
     ProductComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ImageComponent,
+    BeritaComponent
     
 
   ],
