@@ -1,15 +1,24 @@
 <ng-container>
     <!--toolbar-->
-    <mat-toolbar color="primary" class="example-header">
-        <button mat-icon-button (click)="sidenav.toggle()">
-            <mat-icon>menu</mat-icon>
-        </button>
-        <span>Sistem Informasi Inventaris Desa</span>
-        <div class="uk-width-expand"></div>
-        <mat-icon matlisticon>admin_panel_settings</mat-icon>
-        <button mat-button (click)="logout()" >Logout</button>
-    </mat-toolbar>
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top" >Sistem Informasi Desa</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/admin/berita">Pekan Ini</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/admin/image">Barang</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/admin/product">Data</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/login">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!--end toolbar-->
+    
     
     <mat-sidenav-container class="example-container">
     
@@ -20,23 +29,6 @@
       [fixedTopGap]="65"
       [fixedBottomGap]="0">
     
-      
-      <mat-nav-list>
-        <mat-list-item routerLink="/admin/berita">
-            <mat-icon matListIcon>feed</mat-icon>
-            <h3 matLine>Pekan Ini</h3>
-        </mat-list-item>
-        <mat-list-item routerLink="/admin/image">
-            <mat-icon matListIcon>images</mat-icon>
-            <h3 matLine>Gambar</h3>
-        </mat-list-item>
-        <mat-list-item routerLink="/admin/product">
-            <mat-icon matListIcon>list</mat-icon>
-            <h3 matLine>Data</h3>
-        </mat-list-item>
-    
-
-    </mat-nav-list>
       </mat-sidenav>
     
     <mat-sidenav #sidenav mode="side" [position]="'end'"  class="example-sidenav"
